@@ -16,10 +16,10 @@ axios - 0.21.1
 
 ## Used script to run locally
 
-# clone the project
+#### clone the project
 
-# run the following commands in the terminal
+#### run the following commands in the terminal
 
-# npm i (to install the needed dependancies)
+#### npm i (to install the needed dependancies)
 
-# npm run dev (to run locally)
+#### npm run dev (to run locally)
