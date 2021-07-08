@@ -1,0 +1,82 @@
+@use "./abstracts/index" as *;
+
+.nav {
+    font-family: $font-title;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    z-index: 100;
+    height: 100%;
+}
+
+.navLinks {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navLink {
+    padding: 0px 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: darken($secondary-color, 7%);
+    margin: 0px 10px;
+    position: relative;
+}
+
+.activeNavLink {
+    border-left: 3px solid $primary-color;
+    border-radius: 3px;
+}
+
+.navContainer {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: $nav-bar-height;
+    background-image: linear-gradient($tertiary-color, white);
+}
+
+.navTitle {
+    color: $secondary-color;
+    font-size: $size-title;
+    @include tabletView() {
+        display: none;
+    }
+}
+
+.navCartCount {
+    color: white;
+    background-color: $primary-color;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    bottom: 4px;
+    right: 3px;
+    font-size: 10px;
+}
+
+.navLogo {
+    @include mobileView() {
+        display: none;
+    }
+}
+
+.navCompanyTitle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: $size-title;
+    display: none;
+    font-family: $font-title;
+    color: $secondary-color;
+    @include mobileView() {
+        display: block;
+    }
+}
